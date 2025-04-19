@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Design Resources</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="DALL·E 2025-04-15 18.15.18 - A minimalist logo design for a company named AMR. The logo should consist only of the black letters AMR in a simple, modern, and bold font, center.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary-color: #004080;
+      --secondary-color: #0077cc;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --font-family: 'Montserrat', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: var(--primary-color);
+      padding: 30px 20px;
+      position: fixed;
+      height: 100%;
+      box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h2 {
+      color: #fff;
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar ul li a:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateX(5px);
+    }
+
+    .main-content {
+      flex: 1;
+      margin-left: 250px;
+      padding: 40px;
+      background: var(--background-color);
+    }
+
+    header {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        color: #fff;
+        padding: 60px 40px 50px;
+        text-align: center;
+        margin: -30px -40px 40px;
+        position: relative;
+        clip-path: polygon(
+            0 0, 
+            100% 0, 
+            100% 75%, 
+            92% 88%,
+            85% 83%,
+            78% 90%,
+            65% 85%,
+            50% 95%,
+            35% 85%,
+            22% 90%,
+            15% 83%,
+            8% 88%,
+            0 75%
+        );
+        box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    header h1 {
+        font-weight: 600;
+        font-size: 2.4rem;
+        letter-spacing: 0.5px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 1;
+    }
+
+    .main-content {
+        margin-top: -30px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 30px;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background: rgba(0,64,128,0.05);
+      transform: translateX(-3px);
+    }
+
+    .resource-section {
+      margin-bottom: 40px;
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    }
+
+    .resource-section h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .resource-section h2 i {
+      color: var(--secondary-color);
+      font-size: 1.4rem;
+    }
+
+    .resource-section ul {
+      list-style: none;
+      padding-left: 10px;
+    }
+
+    .resource-section ul li {
+      margin-bottom: 15px;
+      padding: 12px;
+      border-left: 3px solid var(--secondary-color);
+      transition: transform 0.3s ease;
+    }
+
+    .resource-section ul li:hover {
+      transform: translateX(5px);
+    }
+
+    .resource-section ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .resource-section ul li a:hover {
+      color: var(--secondary-color);
+    }
+
+    .resource-section ul li a i {
+      color: var(--secondary-color);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 25px;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .resource-section {
+        padding: 20px;
+      }
+
+      .resource-section h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Course Selector</h2>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="digital-design.html"><i class="fas fa-microchip"></i> Digital Design</a></li>
+        <li><a href="digital-verification.html"><i class="fas fa-check-double"></i> Digital Verification</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-content">
+      <header>
+        <h1>Digital Design</h1>
+      </header>
+      <a class="back-link" href="index.html">
+        <i class="fas fa-arrow-left"></i>
+        Back to Courses
+      </a>
+
+      <div class="resource-section">
+        <h2><i class="fas fa-folder-open"></i> Google Drive Resources</h2>
+        <ul>
+          <li>
+            <a href="https://drive.google.com/example-digital-design-1" target="_blank">
+              <i class="fas fa-file-alt"></i>
+              Lecture Notes
+            </a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/example-digital-design-2" target="_blank">
+              <i class="fas fa-project-diagram"></i>
+              Project Files
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="resource-section">
+        <h2><i class="fab fa-youtube"></i> YouTube Playlists</h2>
+        <ul>
+          <li>
+            <a href="https://www.youtube.com/playlist?list=PLdigitaldesign1" target="_blank">
+              <i class="fas fa-play-circle"></i>
+              Introduction &amp; Basics
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/playlist?list=PLdigitaldesign2" target="_blank">
+              <i class="fas fa-play-circle"></i>
+              Advanced Topics
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="resource-section">
+        <h2><i class="fas fa-flask"></i> Labs &amp; Exercises</h2>
+        <ul>
+          <li>
+            <a href="https://drive.google.com/example-digital-design-labs" target="_blank">
+              <i class="fas fa-book-open"></i>
+              Lab Instructions
+            </a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/example-digital-design-exercises" target="_blank">
+              <i class="fas fa-pencil-alt"></i>
+              Practice Exercises
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

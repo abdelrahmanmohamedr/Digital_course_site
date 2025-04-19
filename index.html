@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A.M.R digital courses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="DALL·E 2025-04-15 18.15.18 - A minimalist logo design for a company named AMR. The logo should consist only of the black letters AMR in a simple, modern, and bold font, center.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary-color: #004080;
+      --body-bg: #f8f8f8;
+      --text-color: #333;
+      --link-hover: #0055a5;
+      --font-family: 'Montserrat', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background: var(--body-bg);
+      color: var(--text-color);
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    /* Updated Sidebar Styles */
+    .sidebar {
+      width: 250px;
+      background: var(--primary-color);
+      padding: 30px 20px;
+      position: fixed;
+      height: 100%;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h2 {
+      color: #fff;
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar ul li a:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateX(5px);
+    }
+
+    .main-content {
+      flex: 1;
+      margin-left: 250px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Rest of the original styles */
+    .logo-section {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo-section img {
+      max-width: 300px;
+      height: auto;
+    }
+
+    .logo-section h1 {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+
+    .logo-section p.subheading {
+      margin-top: 5px;
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    .social-banner {
+      background: #faf9f9e5;
+      padding: 25px;
+      width: 100%;
+      max-width: 800px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+
+    .social-banner a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-color);
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-banner a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,64,128,0.3);
+    }
+
+    .description {
+      max-width: 800px;
+      text-align: center;
+      line-height: 1.6;
+      color: var(--text-color);
+    }
+
+    .description p {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+
+      .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .sidebar ul li {
+        margin-bottom: 10px;
+      }
+
+      .sidebar ul li a {
+        padding: 10px 15px;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .social-banner a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Course Selector</h2>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="digital-design.html"><i class="fas fa-microchip"></i> Digital Design</a></li>
+        <li><a href="digital-verification.html"><i class="fas fa-check-double"></i> Digital Verification</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-content">
+      <div class="logo-section">
+        <img src="DALL·E 2025-04-15 18.15.18 - A minimalist logo design for a company named AMR. The logo should consist only of the black letters AMR in a simple, modern, and bold font, center.png" alt="Logo">
+        <h1>Professional Course Resources</h1>
+        <p class="subheading">Your hub for curated courses and resources</p>
+      </div>
+
+      <div class="social-banner">
+        <a href="https://www.linkedin.com/in/abdelrahman-mohamed-053047274/" title="LinkedIn">
+          <i class="fab fa-linkedin-in fa-lg"></i>
+        </a>
+        <a href="https://www.youtube.com/@abdelrahmanmohamed-cg4jj" title="YouTube">
+          <i class="fa-brands fa-youtube fa-lg" style="color: #ec0000f8;"></i>
+        </a>
+      </div>
+
+      <div class="description">
+        <p>
+          Welcome to Professional Course Resources. This page is your central hub for exploring courses
+          such as Digital Design and Digital Verification. You will find curated content including lecture
+          notes, lab materials, tutorials, and much more.
+        </p>
+        <p>
+          Use the sidebar to select a course and navigate through the detailed resource sections designed to
+          support your learning journey.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
