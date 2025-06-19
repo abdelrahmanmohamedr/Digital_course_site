@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Verification - Coming Soon</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="DALL·E 2025-04-15 18.15.18 - A minimalist logo design for a company named AMR. The logo should consist only of the black letters AMR in a simple, modern, and bold font, center.png" type="image/x-icon" />
+  <style>
+    :root {
+      --primary-color: #004080;
+      --secondary-color: #0077cc;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --font-family: 'Montserrat', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--body-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: var(--primary-color);
+      padding: 30px 20px;
+      position: fixed;
+      height: 100%;
+      box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h2 {
+      color: #fff;
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar ul li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(5px);
+    }
+
+    .main-content {
+      flex: 1;
+      margin-left: 250px;
+      padding: 40px;
+      background: var(--background-color);
+    }
+
+    header {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        color: #fff;
+        padding: 60px 40px 50px;
+        text-align: center;
+        margin: -30px -40px 40px;
+        position: relative;
+        clip-path: polygon(
+            0 0, 
+            100% 0, 
+            100% 75%, 
+            92% 88%,
+            85% 83%,
+            78% 90%,
+            65% 85%,
+            50% 95%,
+            35% 85%,
+            22% 90%,
+            15% 83%,
+            8% 88%,
+            0 75%
+        );
+        box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    header h1 {
+        font-weight: 600;
+        font-size: 2.4rem;
+        letter-spacing: 0.5px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 1;
+    }
+
+    .main-content {
+        margin-top: -30px;
+    }
+
+    /* Coming Soon Styles */
+    .coming-soon-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .coming-soon-content {
+      background: var(--card-bg);
+      padding: 60px 40px;
+      border-radius: 8px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .icon-wrapper {
+      margin-bottom: 30px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .icon-wrapper i {
+      font-size: 5rem;
+      color: var(--secondary-color);
+    }
+
+    .coming-soon-content h2 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .coming-soon-content p {
+      font-size: 1.2rem;
+      color: var(--text-color);
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    .progress-bar-container {
+      margin-bottom: 40px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      width: 1%;
+      animation: pulse 2s ease-in-out infinite;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    .progress-percentage {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      font-weight: 600;
+    }
+
+    .notify-section {
+      margin-top: 40px;
+    }
+
+    .notify-section h3 {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .email-input {
+      flex: 1;
+      padding: 12px 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: var(--font-family);
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .email-input:focus {
+      border-color: var(--secondary-color);
+    }
+
+    .notify-btn {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: var(--font-family);
+    }
+
+    .notify-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,119,204,0.3);
+    }
+
+    .features-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature-item {
+      padding: 20px;
+      background: var(--background-color);
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .feature-item i {
+      font-size: 2rem;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+    }
+
+    .feature-item h4 {
+      font-size: 0.9rem;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    /* Animations */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.8;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 25px;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .coming-soon-content {
+        padding: 40px 20px;
+      }
+
+      .coming-soon-content h2 {
+        font-size: 2rem;
+      }
+
+      .email-form {
+        flex-direction: column;
+      }
+
+      .features-preview {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Course Selector</h2>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="digital-design.html"><i class="fas fa-microchip"></i> Digital Design</a></li>
+        <li><a href="coming_soon.html"><i class="fas fa-check-double"></i> Digital Verification</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-content">
+      <header>
+        <h1>Digital Verification</h1>
+      </header>
+
+      <div class="coming-soon-container">
+        <div class="coming-soon-content">
+          <div class="icon-wrapper">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          
+          <h2>Coming Soon</h2>
+          <p>We're working hard to bring you comprehensive digital verification resources. Our team is preparing high-quality content to help you master verification techniques.</p>
+          
+          <div class="progress-bar-container">
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <div class="progress-percentage">1% Complete</div>
+          </div>
+
+          <div class="features-preview">
+            <div class="feature-item">
+              <i class="fas fa-video"></i>
+              <h4>Video Tutorials</h4>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-file-alt"></i>
+              <h4>Lab Manuals</h4>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-tasks"></i>
+              <h4>Exercises</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
